@@ -1,0 +1,51 @@
+/*
+  Copyright 2019 Jason Ertel (jertel). All rights reserved.
+
+  This program is distributed under the terms of version 2 of the
+  GNU General Public License.  See LICENSE for further details.
+
+  This program is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+*/
+.src {
+  color: var(--v-info-base);
+  font-weight: bold;
+}
+
+.dst {
+  color: var(--v-error-base);
+  font-weight: bold;
+}
+
+.details {
+  white-space: nowrap;
+  overflow-y: scroll;
+}
+
+.filter.label {
+  display: inline-block;
+  padding-right: 10px;
+  width: 45%;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.filter.value {
+  text-align: left;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+td {
+  white-space: nowrap;
+}
+
+.packet {
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.footer {
+  text-decoration: none;
+}

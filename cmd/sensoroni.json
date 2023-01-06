@@ -1,0 +1,38 @@
+{
+  "logLevel": "debug",
+  "logFilename": "/home/thanhdk/Documents/Nids/sensoroni/logs/sensoroni.log",
+  "server": {
+    "bindAddress": "0.0.0.0:9822",
+    "baseUrl": "/sensoroni",
+    "maxPacketCount": 5000,
+    "htmlDir": "html",
+    "modules": {
+      "filedatastore": {
+        "jobDir": "jobs"
+      },
+      "securityonion": {
+        "elasticsearchHost": "http://10.2.65.23:9200",
+        "elasticsearchUsername": "",
+        "elasticsearchPassword": "",
+        "elasticsearchVerifyCert": false
+      },
+      "statickeyauth": {
+        "apiKey": ""
+      }
+    }
+  },
+  "agent": {
+    "pollIntervalMs": 10000,
+    "serverUrl": "http://0.0.0.0:9822",
+    "modules": {
+      "statickeyauth": {
+        "apiKey": ""
+      },
+      "stenoquery": {
+        "executablePath": "/home/thanhdk/Documents/Nids/sensoroni/stenoquery.sh",
+        "pcapInputPath": "/var/lib/stenographer/thread0/packets",
+        "pcapOutputPath": "/var/lib/stenographer/thread0/index"
+      }
+    }
+  }
+}
